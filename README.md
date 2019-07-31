@@ -29,45 +29,38 @@ bag_file: name of the bag file
 path_name: path of the directory where images will be stored.
 image_topic: topic of the image e.g. /frontNear/left/image_raw/
 
+![Screenshot from 2019-07-31 11-39-17](https://user-images.githubusercontent.com/41137582/62187781-13c34800-b388-11e9-874a-87d50942445b.png)
 
-                                                 Fig. 2: To extract the images out of a given bag file
+                             Fig. 2: To extract the images out of a given bag file
 
 
 Run the above code and store the corresponding images in the left and right directories(based on the topics of the messages).
 Note that the directory for storing the left and right images needs to be created before running the code. 
 
+###### Calculating Intrinsic parameters:
+
+*FLOWCHART*
+ 
+ ![Screenshot from 2019-07-31 11-45-42](https://user-images.githubusercontent.com/41137582/62188019-c3001f00-b388-11e9-9a18-5b71948e3e86.png)
 
 
+*IMPORTANT FUNCTIONS USED*
 
+-compare_ssim: Compute the mean structural similarity index between two images.
 
+-cv2.findChessboardCorners: Finds positions of the internal corners of the chessboard. Returns a boolean value depending on if the given shape of corners are found, also returns location of the corners if true.
 
+-cv2.cornerSubPix: The function iterates to find the sub-pixel accurate location of corners or radial saddle points.
 
+-cv2.drawChessboardCorners: Renders the detected chessboard corners.
 
+-cv2.calibrateCamera: Finds the camera intrinsic and extrinsic parameters from several views of a calibration pattern. Returns the rotation and translation matrix corresponding to each pattern. Also returns the camera intrinsic and distortion vector corresponding to lowest reprojection error.
 
+-cv2.projectPoints: Projects 3D points to an image. Used for calculating the reprojection error.
 
+-cv2.norm: Calculates the absolute or relative difference norm between the given image matrices. 
 
-
-
-
-2. Intrinsic Parameters:
-
-    A. FLOWCHART
-
-
-    B. IMPORTANT FUNCTIONS USED 
-compare_ssim: Compute the mean structural similarity index between two images.
-
-cv2.findChessboardCorners: Finds positions of the internal corners of the chessboard. Returns a boolean value depending on if the given shape of corners are found, also returns location of the corners if true.
-
-cv2.cornerSubPix: The function iterates to find the sub-pixel accurate location of corners or radial saddle points.
-
-cv2.drawChessboardCorners: Renders the detected chessboard corners.
-
-cv2.calibrateCamera: Finds the camera intrinsic and extrinsic parameters from several views of a calibration pattern. Returns the rotation and translation matrix corresponding to each pattern. Also returns the camera intrinsic and distortion vector corresponding to lowest reprojection error.
-cv2.projectPoints: Projects 3D points to an image. Used for calculating the reprojection error.
-cv2.norm: Calculates the absolute or relative difference norm between the given image matrices. 
-
-    C. RESULTS
+*RESULTS*
 The algorithm takes 40 patterns from the given sample to calibrate the given camera. To cover all the possible orientations of the checkerboard, the selected sample images must be different in orientations. Three techniques have been used to select such samples-
     1. Simply selecting first 40 images: Very low reprojection error suggests a possibility of images with similar orientations of the board been selected for calibration.  Therefore, a technique to select “good” images from the sample is required.
 
