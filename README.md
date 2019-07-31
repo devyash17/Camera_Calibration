@@ -1,17 +1,16 @@
 # Camera_Calibration
 
 
-1. Calibration Techniques:
-    A. Intrinsic
-    B. Extrinsic
-    C. ArUco Marker
-    D. Lidar & Camera together
+## Calibration Techniques:
+    - Intrinsic (using checkerboard)
+    - Extrinsic (using ArUco Markers)
+    - Lidar & Camera together
 
-A. Intrinsic
+### Intrinsic (using checkerboard)
 
-1. Data Preprocessing:
+#### Data Preprocessing:
 
-    A. BAG FILES
+###### BAG FILES
 A bag is a file format in ROS for storing ROS message data. Bags -- so named because of their .bag extension -- have an important role in ROS, and a variety of tools have been written to allow you to store, process, analyze, and visualize them.
 Bags are typically created by a tool like rosbag, which subscribe to one or more ROS topics, and store the serialized message data in a file as it is received. These bag files can also be played back in ROS to the same topics they were recorded from or even remapped to new topics.
 
@@ -19,10 +18,10 @@ We can use the following command to get the details of a bag file:
 rosbag info foo.bag
 The output might look something like this:
 
-![img](/home/intern/Pictures/1.png)
+![img](https://answers.ros.org/upfiles/14701677325167827.png)
                                            Fig. 1
 
-    B. IMAGE EXTRACTION
+ ###### IMAGE EXTRACTION
 The images contained in the bag file can be extracted using the below given code snippet:
 Command to run the below code:
                  python program_name.py bag_file.bag path_name image_topic
