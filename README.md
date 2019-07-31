@@ -61,6 +61,7 @@ Note that the directory for storing the left and right images needs to be create
 - cv2.norm: Calculates the absolute or relative difference norm between the given image matrices. 
 
 *RESULTS*
+
 The algorithm takes 40 patterns from the given sample to calibrate the given camera. To cover all the possible orientations of the checkerboard, the selected sample images must be different in orientations. Three techniques have been used to select such samples:
 
     1. Simply selecting first 40 images: Very low reprojection error suggests a possibility of images with similar orientations of the board been selected for calibration.  Therefore, a technique to select “good” images from the sample is required.
