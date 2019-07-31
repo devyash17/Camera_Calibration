@@ -37,14 +37,14 @@ image_topic: topic of the image e.g. /frontNear/left/image_raw/
 Run the above code and store the corresponding images in the left and right directories(based on the topics of the messages).
 Note that the directory for storing the left and right images needs to be created before running the code. 
 
-###### Calculating Intrinsic parameters:
+#### Calculating Intrinsic parameters:
 
-*FLOWCHART*
+###### FLOWCHART
  
  ![Screenshot from 2019-07-31 11-45-42](https://user-images.githubusercontent.com/41137582/62188019-c3001f00-b388-11e9-9a18-5b71948e3e86.png)
 
 
-*IMPORTANT FUNCTIONS USED*
+###### IMPORTANT FUNCTIONS USED
 
 - compare_ssim: Compute the mean structural similarity index between two images.
 
@@ -60,7 +60,7 @@ Note that the directory for storing the left and right images needs to be create
 
 - cv2.norm: Calculates the absolute or relative difference norm between the given image matrices. 
 
-*RESULTS*
+###### RESULTS
 
 The algorithm takes 40 patterns from the given sample to calibrate the given camera. To cover all the possible orientations of the checkerboard, the selected sample images must be different in orientations. Three techniques have been used to select such samples:
 
