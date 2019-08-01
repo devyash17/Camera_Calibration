@@ -19,6 +19,7 @@ objp2 = np.zeros((2*2,3),np.float32)
 objp2[:,:2] = np.mgrid[0:2,0:2].T.reshape(-1,2)
 
 # Arrays to store object points and image points from all the images.
+# for checkerboard
 objpoints1 = [] # 3d point in real world space
 imgpoints1 = [] # 2d points in image plane.
 objpoints2 = []
@@ -31,8 +32,6 @@ rets1 = []
 rets2 = []
 numImg = 943
 count = 0
-#for i in range(0,100):
-#    images.append("/home/intern/devyash/intrinsic/pics/left/frame" + "{:0>6d}".format(i) + ".png")
 
 for i in range(0,numImg):
     if(i%20!=0):
@@ -42,19 +41,6 @@ for i in range(0,numImg):
     count = count+1
     if count==40:
         break
-
-images3 = []
-images4 = []
-count = 0
-for i in range(0,numImg):
-#    if(i%10!=0):
-#        continue
-    images3.append("/home/intern/devyash/extrinsic/arucoImg/left/frame" + "{:0>6d}".format(i) + ".png")    
-    images4.append("/home/intern/devyash/extrinsic/arucoImg/right/frame" + "{:0>6d}".format(i) + ".png")    
-    count = count+1
-    if count==200:
-        break
-
 
 for (fname1,fname2) in zip(images1,images2):
     img1 = cv2.imread(fname1)
@@ -88,6 +74,10 @@ ret2, mtx2, dist2, rvecs2, tvecs2 = cv2.calibrateCamera(objpoints2, imgpoints2, 
 
 retval, cameraMatrix1, distCoeffs1, cameraMatrix2, distCoeffs2, R, T, E, F = cv2.stereoCalibrate(objpoints1, imgpoints1, imgpoints2, mtx1, dist1, mtx2, dist2,  gray1.shape[::-1],criteria) 
 
+#for aruco markers
+images3 = []
+images4 = []
+count = 0
 rset = []
 tset = []
 dists = []
@@ -95,6 +85,16 @@ objpoints3 = []
 imgpoints3 = []
 objpoints4 = []
 imgpoints4 = []
+
+for i in range(0,numImg):
+#    if(i%10!=0):
+#        continue
+    images3.append("/home/intern/devyash/extrinsic/arucoImg/left/frame" + "{:0>6d}".format(i) + ".png")    
+    images4.append("/home/intern/devyash/extrinsic/arucoImg/right/frame" + "{:0>6d}".format(i) + ".png")    
+    count = count+1
+    if count==200:
+        break
+
 ## set dictionary size depending on the aruco marker selected
 aruco_dict = aruco.Dictionary_get(aruco.DICT_ARUCO_ORIGINAL)
 #board = aruco.GridBoard_create(4, 5, markerLength, 0, aruco_dict)
