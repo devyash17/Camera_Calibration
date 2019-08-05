@@ -1,29 +1,29 @@
 # MapmyIndia Internship Plan
 # Computer Vision Notes
 
-Computer vision is an interdisciplinary scientific field that deals with how ​ computers​ can be
+Computer vision is an interdisciplinary scientific field that deals with how computers can be
 made to gain high-level understanding from digital images or videos.
 
 ## Calculation of Camera Matrix
             x = PX
 
-##### Basic Pinhole Model
+##### Basic Pinhole Model:
 
 ![image](https://user-images.githubusercontent.com/41137582/62455336-bcf8ac80-b793-11e9-93fb-ae19de7ff873.png)
 
-##### Principal Point Offset
+##### Principal Point Offset:
 
 ![image](https://user-images.githubusercontent.com/41137582/62455485-15c84500-b794-11e9-8292-fc0a84136fab.png)
 
-#### Camera Rotation and Translation
+#### Camera Rotation and Translation:
 
 ![image](https://user-images.githubusercontent.com/41137582/62460478-ba9c4f80-b79f-11e9-8d21-b8faa27790ce.png)
 
-#### Finite Projective Camera
+#### Finite Projective Camera:
 
 ![image](https://user-images.githubusercontent.com/41137582/62455615-6d66b080-b794-11e9-9c27-7d13d3e5810f.png)
 
-#### Distortion
+#### Distortion:
 1. Radial: Straight lines appear curved.
 
 ![image](https://user-images.githubusercontent.com/41137582/62456048-3b098300-b795-11e9-9891-2a1dde356fcc.png)
