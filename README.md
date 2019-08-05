@@ -204,6 +204,10 @@ The algorithm takes 40 patterns from the given sample to calibrate the given cam
       b.   Results with threshold SSIM = 0.62
 ![Screenshot from 2019-07-31 11-56-58](https://user-images.githubusercontent.com/41137582/62188520-525a0200-b38a-11e9-971a-56fca1fddd92.png)
 
+A plot of threshold value of ssim of selected images(X) against the reprojection error(Y) - 
+![plot](https://user-images.githubusercontent.com/29208697/62463900-dce69b00-b7a8-11e9-815c-d54797f7e13c.png)
+
+
 
 ## Extrinsic Calibration (using arUco markers)
 
