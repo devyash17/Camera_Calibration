@@ -1,7 +1,7 @@
 # MapmyIndia Internship Plan
 # Computer Vision Notes
 
-## 1. [Computer Vision Notes](codes/CameraCalibration/README.md)
+## 1. [Computer Vision Notes](codes/Camera%20Calibration/README.md)
 
 ## 2. Camera_Calibration
 
