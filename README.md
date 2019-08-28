@@ -1,11 +1,11 @@
 # MapmyIndia Internship Plan
 # Computer Vision Notes
 
-#### 1. [Computer Vision Notes](codes/CameraCalibration/README.md)
+## 1. [Computer Vision Notes](codes/CameraCalibration/README.md)
 
-#### 2. Camera_Calibration
+## 2. Camera_Calibration
 
-## Calibration Techniques:
+### Calibration Techniques:
     
 #### a. [Intrinsic Calibration (using checkerboard)](codes/CameraCalibration/Checkerboard/README.md)
 
