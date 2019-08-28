@@ -7,6 +7,6 @@
 
    ### Calibration Techniques:
 
--[*Intrinsic Calibration (using checkerboard)*](codes/CameraCalibration/Checkerboard/README.md)
+-[*Intrinsic Calibration (using checkerboard)*](codes/Camera%20Calibration/Checkerboard/README.md)
 
--[*Extrinsic Calibration (using arUco markers)*](codes/CameraCalibration/Aruco/README.md)
+-[*Extrinsic Calibration (using arUco markers)*](codes/Camera%20Calibration/Aruco/README.md)
