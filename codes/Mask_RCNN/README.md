@@ -11,34 +11,26 @@ The repository includes:
 * Jupyter notebooks to visualize the detection pipeline at every step
 * ParallelModel class for multi-GPU training
 * Evaluation on MS COCO metrics (AP)
-* Example of training on your own dataset
 
-
-The code is documented and designed to be easy to extend. If you use it in your research, please consider citing this repository (bibtex below). If you work on 3D vision, you might find our recently released [Matterport3D](https://matterport.com/blog/2017/09/20/announcing-matterport3d-research-dataset/) dataset useful as well.
-This dataset was created from 3D-reconstructed spaces captured by our customers who agreed to make them publicly available for academic use. You can see more examples [here](https://matterport.com/gallery/).
 
 # Getting Started
 * [demo.ipynb](samples/demo.ipynb) Is the easiest way to start. It shows an example of using a model pre-trained on MS COCO to segment objects in your own images.
 It includes code to run object detection and instance segmentation on arbitrary images.
 
-* [train_shapes.ipynb](samples/shapes/train_shapes.ipynb) shows how to train Mask R-CNN on your own dataset. This notebook introduces a toy dataset (Shapes) to demonstrate training on a new dataset.
-
 * ([model.py](mrcnn/model.py), [utils.py](mrcnn/utils.py), [config.py](mrcnn/config.py)): These files contain the main Mask RCNN implementation. 
 
 
-* [inspect_data.ipynb](samples/coco/inspect_data.ipynb). This notebook visualizes the different pre-processing steps
+* [inspect_data.ipynb](samples/inspect_data.ipynb). This notebook visualizes the different pre-processing steps
 to prepare the training data.
 
-* [inspect_model.ipynb](samples/coco/inspect_model.ipynb) This notebook goes in depth into the steps performed to detect and segment objects. It provides visualizations of every step of the pipeline.
+* [inspect_model.ipynb](samples/inspect_model.ipynb) This notebook goes in depth into the steps performed to detect and segment objects. It provides visualizations of every step of the pipeline.
 
-* [inspect_weights.ipynb](samples/coco/inspect_weights.ipynb)
-This notebooks inspects the weights of a trained model and looks for anomalies and odd patterns.
 
 
 # Step by Step Detection
-To help with debugging and understanding the model, there are 3 notebooks 
-([inspect_data.ipynb](samples/coco/inspect_data.ipynb), [inspect_model.ipynb](samples/coco/inspect_model.ipynb),
-[inspect_weights.ipynb](samples/coco/inspect_weights.ipynb)) that provide a lot of visualizations and allow running the model step by step to inspect the output at each point. Here are a few examples:
+To help with debugging and understanding the model, there are 2 notebooks 
+([inspect_data.ipynb](samples/inspect_data.ipynb), [inspect_model.ipynb](samples/inspect_model.ipynb),
+that provide a lot of visualizations and allow running the model step by step to inspect the output at each point. Here are a few examples:
 
 
 
@@ -76,37 +68,37 @@ TensorBoard is another great debugging and visualization tool. The model is conf
 
 
 # Training on MS COCO
-We're providing pre-trained weights for MS COCO to make it easier to start. You can
-use those weights as a starting point to train your own variation on the network.
-Training and evaluation code is in `samples/coco/coco.py`. You can import this
-module in Jupyter notebook (see the provided notebooks for examples) or you
+Pre-trained weights for MS-COCO are available. We can
+use those weights as a starting point to train our own variation on the network.
+Training and evaluation code is in `samples/coco.py`. We can import this
+module in Jupyter notebook (see the provided notebooks for examples) or we
 can run it directly from the command line as such:
 
 ```
 # Train a new model starting from pre-trained COCO weights
-python3 samples/coco/coco.py train --dataset=/path/to/coco/ --model=coco
+python3 samples/coco.py train --dataset=/path/to/coco/ --model=coco
 
 # Train a new model starting from ImageNet weights
-python3 samples/coco/coco.py train --dataset=/path/to/coco/ --model=imagenet
+python3 samples/coco.py train --dataset=/path/to/coco/ --model=imagenet
 
 # Continue training a model that you had trained earlier
-python3 samples/coco/coco.py train --dataset=/path/to/coco/ --model=/path/to/weights.h5
+python3 samples/coco.py train --dataset=/path/to/coco/ --model=/path/to/weights.h5
 
 # Continue training the last model you trained. This will find
 # the last trained weights in the model directory.
-python3 samples/coco/coco.py train --dataset=/path/to/coco/ --model=last
+python3 samples/coco.py train --dataset=/path/to/coco/ --model=last
 ```
 
-You can also run the COCO evaluation code with:
+We can also run the COCO evaluation code with:
 ```
 # Run COCO evaluation on the last trained model
-python3 samples/coco/coco.py evaluate --dataset=/path/to/coco/ --model=last
+python3 samples/coco.py evaluate --dataset=/path/to/coco/ --model=last
 ```
 
-The training schedule, learning rate, and other parameters should be set in `samples/coco/coco.py`.
+The training schedule, learning rate, and other parameters should be set in `samples/coco.py`.
 
 
-# Training on Your Own Dataset
+# Training on our own Dataset
 
 Start by reading this [blog post about the balloon color splash sample](https://engineering.matterport.com/splash-of-color-instance-segmentation-with-mask-r-cnn-and-tensorflow-7c761e238b46). It covers the process starting from annotating images to training to using the results in a sample application.
 
