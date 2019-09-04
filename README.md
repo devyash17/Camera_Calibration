@@ -7,9 +7,9 @@
 
    ### Calibration Techniques:
 
-   -[*Intrinsic Calibration (using checkerboard)*](codes/Camera%20Calibration/Checkerboard/README.md)
+  * [*Intrinsic Calibration (using checkerboard)*](codes/Camera%20Calibration/Checkerboard/README.md)
 
-   -[*Extrinsic Calibration (using arUco markers)*](codes/Camera%20Calibration/Aruco/README.md)
+  * [*Extrinsic Calibration (using arUco markers)*](codes/Camera%20Calibration/Aruco/README.md)
 
 ## 3. Road objects detection and segmentation
--[*Mask_RCNN*](codes/Mask_RCNN/README.md)
+* [*Mask_RCNN*](codes/Mask_RCNN/README.md)
