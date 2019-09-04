@@ -47,22 +47,14 @@ Examples of generated masks. These then get scaled and placed on the image in th
 
 ![](assets/detection_masks.png)
 
-## 4.Layer activations
-Often it's useful to inspect the activations at different layers to look for signs of trouble (all zeros or random noise).
 
-![](assets/detection_activations.png)
-
-## 5. Weight Histograms
+## 4. Weight Histograms
 Another useful debugging tool is to inspect the weight histograms. These are included in the inspect_weights.ipynb notebook.
 
 ![](assets/detection_histograms.png)
 
-## 6. Logging to TensorBoard
-TensorBoard is another great debugging and visualization tool. The model is configured to log losses and save weights at the end of every epoch.
 
-![](assets/detection_tensorboard.png)
-
-## 6. Composing the different pieces into a final result
+## 5. Composing the different pieces into a final result
 
 ![](assets/detection_final.png)
 
