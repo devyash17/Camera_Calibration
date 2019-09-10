@@ -44,3 +44,28 @@ In this paper, we propose a unified end-to-end trainable multi-task network that
     
 5. Training
     - Run 'train.sh'
+
+### Annotation Examples
+
+![image](https://user-images.githubusercontent.com/41137582/64606340-a7565280-d3e3-11e9-9833-61142d90b8a6.png)
+The above annotation can be visualized by running the script make_lmdb.sh
+
+### Progress till now
+
+I trained the model on [Caltech Lanes Dataset](http://www.mohamedaly.info/datasets/caltech-lanes) with the following configurations:
+</br>[*`test_iter`*](https://github.com/BVLC/caffe/wiki/Solver-Prototxt#test_iter): 2
+</br>[*`test_interval`*](https://github.com/BVLC/caffe/wiki/Solver-Prototxt#test_interval): 10
+</br>[*`base_lr`*](https://github.com/BVLC/caffe/wiki/Solver-Prototxt#base_lr): 0.005
+</br>[*`lr_policy`*](https://github.com/BVLC/caffe/wiki/Solver-Prototxt#lr_policy): step
+</br>[*`gamma`*](https://github.com/BVLC/caffe/wiki/Solver-Prototxt#gamma): 0.1
+</br>[*`max_iter`*](https://github.com/BVLC/caffe/wiki/Solver-Prototxt#max_iter): 1000
+</br>[*`momentum`*](https://github.com/BVLC/caffe/wiki/Solver-Prototxt#momentum): 0.9
+</br>[*`solver_mode`*](https://github.com/BVLC/caffe/wiki/Solver-Prototxt#solver_mode): CPU
+
+#### Loss vs Iterations:
+![image](https://user-images.githubusercontent.com/41137582/64609917-a3c6c980-d3eb-11e9-9798-34cc7b2842a6.png)
+![image](https://user-images.githubusercontent.com/41137582/64609948-bf31d480-d3eb-11e9-898f-3ae223bbab27.png)
+![image](https://user-images.githubusercontent.com/41137582/64609989-d4a6fe80-d3eb-11e9-9583-864d5f613be6.png)
+
+As seen in the graph above, the loss functions for the three branches of the network are converging in nature.</br>L = w<sub>1</sub>L<sub>reg</sub> + w<sub>2</sub>L<sub>om</sub> + w<sub>3</sub>L<sub>ml</sub> + w<sub>4</sub>L<sub>vp</sub>
+</br> where L<sub>reg</sub> is a grid regression L1 loss,L<sub>om</sub> and L<sub>ml</sub> and L<sub>vp</sub> are are cross entropy losses in each branch of the network.
