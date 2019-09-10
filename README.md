@@ -11,3 +11,4 @@
 
 ## 3. Road objects detection and segmentation
 * [*Mask_RCNN*](codes/Mask_RCNN/README.md)
+* [*VPGNet*](codes/VPGNet/README.md)
