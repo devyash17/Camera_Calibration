@@ -48,7 +48,7 @@ In this paper, we propose a unified end-to-end trainable multi-task network that
 ### Annotation Examples
 
 ![image](https://user-images.githubusercontent.com/41137582/64606340-a7565280-d3e3-11e9-9833-61142d90b8a6.png)
-The above annotation can be visualized by running the script make_lmdb.sh
+The above annotation can be visualized by running the script vpg_annot_v1.m
 
 ### Progress till now
 
