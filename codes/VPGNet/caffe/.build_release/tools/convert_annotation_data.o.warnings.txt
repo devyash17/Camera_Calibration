@@ -1,0 +1,4 @@
+tools/convert_annotation_data.cpp: In function ‘int main(int, char**)’:
+tools/convert_annotation_data.cpp:233:8: warning: variable ‘generate_img’ set but not used [-Wunused-but-set-variable]
+   bool generate_img = true;
+        ^~~~~~~~~~~~
