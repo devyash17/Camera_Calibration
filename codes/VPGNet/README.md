@@ -69,3 +69,8 @@ I trained the model on [Caltech Lanes Dataset](http://www.mohamedaly.info/datase
 
 As seen in the graph above, the loss functions for the three branches of the network are converging in nature.</br>L = w<sub>1</sub>L<sub>reg</sub> + w<sub>2</sub>L<sub>om</sub> + w<sub>3</sub>L<sub>ml</sub> + w<sub>4</sub>L<sub>vp</sub>
 </br> where L<sub>reg</sub> is a grid regression L1 loss, L<sub>om</sub> and L<sub>ml</sub> and L<sub>vp</sub> are are cross entropy losses in each branch of the network.
+
+#### Results on GAZE images:
+##### Before post processing
+</br>![3](https://user-images.githubusercontent.com/41137582/65681432-82660e80-e076-11e9-8337-8ec422ede654.png)
+</br>![7](https://user-images.githubusercontent.com/41137582/65681450-872ac280-e076-11e9-9164-12b39fb04dbb.png)
