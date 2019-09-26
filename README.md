@@ -6,8 +6,8 @@ The objective of the internship is to extract map components such as lane, road 
  - #### [*Intrinsic Calibration (using checkerboard)*](codes/Camera%20Calibration/Checkerboard)
  - #### [*Extrinsic Calibration (using arUco markers)*](codes/Camera%20Calibration/Aruco)
  
- - *Camera to Lidar Extrinsic Calibration*
- - [*Computer Vision Notes*](codes/Camera%20Calibration/README.md)
+ - #### *Camera to Lidar Extrinsic Calibration*
+ - #### [*Computer Vision Notes*](codes/Camera%20Calibration/README.md)
 
 ## 2. Road objects detection and segmentation using AI/ML techniques
 This [AOD sheet](docs/AOD_Attributes.xlsx) contains different road objects for which we are aiming to find a suitable architecture.
