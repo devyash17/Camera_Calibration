@@ -13,5 +13,4 @@ The objective of the internship is to extract map components such as lane, road 
 This [AOD sheet](docs/AOD_Attributes.xlsx) contains different road objects for which we are aiming to find a suitable architecture.
 * [Detection based architecture: *Mask_RCNN*](codes/Mask_RCNN)
 * [Segmentation based architecture: *VPGNet*](codes/VPGNet)
-
-## 3. Connecting the results of the previous task(detection and segmentation) to the real world physical coordinates
+* [Instance Segmentation architecture: *PANet*](codes/PANet)
