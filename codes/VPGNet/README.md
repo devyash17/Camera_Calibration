@@ -71,10 +71,6 @@ As seen in the graph above, the loss functions for the three branches of the net
 </br> where L<sub>reg</sub> is a grid regression L1 loss, L<sub>om</sub> and L<sub>ml</sub> and L<sub>vp</sub> are are cross entropy losses in each branch of the network.
 
 #### Results on GAZE images:
-##### Before post-processing
+##### Before post processing
 </br>![3](https://user-images.githubusercontent.com/41137582/65681432-82660e80-e076-11e9-8337-8ec422ede654.png)
 </br>![7](https://user-images.githubusercontent.com/41137582/65681450-872ac280-e076-11e9-9164-12b39fb04dbb.png)
-
-##### After post-processing
-</br>![image](https://user-images.githubusercontent.com/41137582/70687867-6289d280-1cd6-11ea-8ed1-75bc8883319f.png)
-</br>![image](https://user-images.githubusercontent.com/41137582/70687911-79c8c000-1cd6-11ea-8e6d-1e2b9e4c36cb.png)
